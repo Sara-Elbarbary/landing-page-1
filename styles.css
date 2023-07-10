@@ -29,21 +29,12 @@ body{
     background-position: center ;
     height: 100%;
     min-height: 100vh; 
-}
-
-@media (max-width: 400px) {
-    body {
-      background-size: auto ;
-    }
-  }
-  
-  
+}   
 
 header{
     /*background-color: rgba(0, 0, 0, 0.2);*/
     display: flex;
     justify-content: space-between;
-   
     padding: 0.5rem 12%;
     padding-bottom: 0;
     height: 4rem;
@@ -56,6 +47,14 @@ img{
 nav{
     display: flex;
     align-items: center;
+}
+
+.menu{
+  display: none;
+  font-family: 'EB Garamond', Tahoma, Geneva, Verdana, serif;
+  font-size: 26px;
+  height: 100%;
+  
 }
 
 ul{
@@ -157,7 +156,6 @@ main{
 .button:hover {
     background-color: transparent;
     border-color: #3f282a;
-    /*border-color: #7a8aa0;*/
     border-style: solid;
     border-width: thin;
     color: #3f282a;
@@ -165,11 +163,26 @@ main{
 }
 
 
-footer{
-    color: white;
-    height: 2rem;
-    text-align: center;
+@media (max-width: 600px) {
+  /*body {
+    background-size: auto ;
+  }*/
+  nav{
+    display: block;
+  }
+  ul{
+    display: block;
+  }
+  li{
+    display: none;
+    margin-left: 0;
+  }
+  .menu{
+    display: block;
+    top: 50%;
+    position: relative;
+  }
+  nav:hover li{
+    display: block;
+  }
 }
-
-
-  
